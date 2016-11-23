@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+		<title>我的美篇s</title>
+		<meta name="keywords" content="维创、易视彩刊">
+		<meta name="description" content="">
+		<meta name="robots" content="index,follow">
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/ani.css">
+    	<link rel="stylesheet" href="css/skin.css"/>
+    	<script>
+    		var obj = {"key":"1","value":"2"};
+			var newObj = obj;
+			newObj.value += obj.key;
+			console.log(obj.value);
+    	</script>
+	</head>
+	
+	<body>
+		<section class="article-container">
+			<div class="article-panel-hd">
+				<div class="article-title">
+				举着相机游北疆，排到手软举着相机游北疆，排到手软</div>
+				<div class="article-label">
+					<span class="article-time">2016-10-21</span>
+					<span class="article-author href">易视彩刊</span>
+					<span class="article-author">小美</span>
+					<span class="article-view-num">阅读 <span class="num">20452</span></span>
+				</div>
+				<div class="article-label reward">分享此文章给好友，5人阅读，奖励1元，15人阅读，再奖励2元，30人阅读，再奖励3元，共计6元。<span class="endtext">分享奖励会自动发放到你的微信钱包</span></div>
+			</div>
+			<div class="article-panel-bd">
+				<p class="pag">期待已久的坝上之行，终于在这个金秋时节如愿以偿了。众所周知秋天的坝上美如画，坝上的秋比南方的秋来的都早，进入九月的坝上正式赏秋的最好时节。</p>
+				<img class="article-img" src="img/article-img.jpg" alt="">
+				<img class="article-img" src="img/article-img.jpg" alt="">
+				<img class="article-img" src="img/article-img.jpg" alt="">
+				<p class="pag">期待已久的坝上之行，终于在这个金秋时节如愿以偿了。众所周知秋天的坝上美如画，坝上的秋比南方的秋来的都早，进入九月的坝上正式赏秋的最好时节。</p>
+				<img class="article-img" src="img/article-img.jpg" alt="">
+			</div>
+			<!-- <p class="linetext"></p>
+			<div class="ysck-ecode-wrap">
+				<div class="guanzhubox">
+					<img class="bot_logo" src="img/head.png" alt="">
+					<div class="bot_text">
+						<div class="bot_title">易视彩刊</div>
+						<p class="bot_con">啦啦啦～～～</p>
+					</div>
+					<div class="gz_btn">关注</div>
+				</div>
+			</div> -->
+			<div class="bot_btnWrap">
+				<a class="public_btn">关注我们</a>
+			</div>
+		</section>
+		<div class="maskc"></div>
+		<div class="layerwraps">
+			<img src="img/wChatCode.jpg" alt="">
+			<p>长按扫描二维码</p>
+		</div>
+
+    	<script src="js/jquery-2.1.4.min.js"></script>
+		
+		<!-- start wx share -->
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript">
+		    var appIdstr = '',
+		    	timestampstr = '',
+		        nonceStrstr = '',
+		        signaturestr = '',
+
+		        wx_share_title = '',
+		        wx_share_desc ='',
+		        wx_share_link = '',
+		        wx_share_img = '';
+		</script>
+		<script src="Scripts/wxfx.js"></script>
+		<script>
+		    ShareMessage(wx_share_title, wx_share_desc, wx_share_link, wx_share_img);
+		</script>
+		<!-- end wx share -->
+		<script>
+			$('.gz_btn').click(function(){
+				$('.maskc, .layerwrap').show();
+			})
+			$('.maskc').click(function(){
+				$(this).hide();
+				$('.layerwrap').hide();
+			})
+		</script>
+
+	</body>
+
+</html>

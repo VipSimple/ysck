@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+		<title>编辑</title>
+		<meta name="keywords" content="维创、易视彩刊">
+		<meta name="description" content="">
+		<meta name="robots" content="index,follow">
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/ani.css">
+    	<link rel="stylesheet" href="css/skin.css"/>
+	</head>
+	
+	<body>
+		
+		<div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+		<div class="container">
+			<section class="edit-container scene scene-active">
+				<div class="edit-article-hd">
+					<div class="edit-article-cover" style="background-image:url(img/article-img.jpg);">
+						<p class="edit-article-title line-02">点击设置标题</p>
+					</div>
+				</div>
+				<div id="uploaderBox" class="edit-article-bd" data-vcxx-id="">
+					<div class="edit-article-item js_limit"  data-vcxx-imgText="">
+						<div class="edit-article-img">
+							<div class="article-img" style="background-image:url(img/placeholder.jpg);"></div>
+						</div>
+						<div class="edit-article-text">
+							<p class="article-text line-04">点击添加文字</p>
+						</div>
+						<div class="edit-article-delete"></div>
+						<div class="edit-add_top">
+							<div class="add_top_bit"></div>
+							<div class="edit-add-check-top">
+								<div class="edit-add-option_text">文本</div>
+								<div class="edit-add-option_img">
+									<span>图片</span><input class="uploaderInput" data-id="1" type="file" accept="image/*" multiple>
+								</div>
+							</div>
+						</div>
+						<div class="edit-add_bottom">
+							<div class="add_bottom_bit"></div>
+							<div class="edit-add-check-bottom">
+								<div class="edit-add-option_text">文本</div>
+								<div class="edit-add-option_img"><span>图片</span></div>
+							</div>
+						</div>
+						<div class="pos-arrow arrow_top">^</div>
+						<div class="pos-arrow arrow_bottom">^</div>
+					</div>
+				</div>
+				<a id="submitItemBtn" class="submitItemBtn" href="javascript:;">发布</a>
+			</section>
+			<!-- 编辑内容页 -->
+			<section id="textBox" class="textBox layerWrap scene scene-next">
+				<!-- <div class="layerTitle">编辑文章</div> -->
+				<textarea id="" class="textarea" name="text" placeholder="编辑文章 (不超过5000字)"></textarea>
+				<div class="setArticlePos">
+					<div class="setLabel">设置文章展示位置:</div>
+					<div class="setSelect">
+						<label for="before">图片之前<input id="before" type="radio" name="is_text_top" value="0" checked></label>
+						<label for="after">图片之后<input id="after" type="radio" name="is_text_top" value="1"></label>
+					</div>
+				</div>
+				<input value="1" name="sort" type="hidden"/>
+				<a id="submitBtn" class="submitBtn" href="javascript:;">确定</a>
+			</section>
+			<section id="titleBox" class="titleBox layerWrap scene scene-next">
+				<!-- <div class="layerTitle">文章标题</div> -->
+				<textarea id="" class="textarea" name="title" placeholder="请输入文章标题"></textarea>
+				<a id="submitTitleBtn" class="submitBtn" href="javascript:;">确定</a>
+			</section>
+			<!-- 个人信息页 -->
+			<section class="shareSettingBox scene scene-next">
+				<div class="setTitle">分享设置</div>
+				<div class="setCont">
+					<span class="setCont-lable">谁可以看:</span>
+					<div class="setCont-select">
+						<label for="sele">个人<input id="sele" type="radio" name="type" value="" checked></label>
+						<span class="tips">自行控制分享范围， 仅被分享的人可见</span>
+					</div>
+					<div class="setCont-select">
+						<label for="public">公开<input id="public" type="radio" name="type" value=""></label>
+						<span class="tips">所有人可见，目录入个人中心栏</span>
+					</div>
+					<div class="userDetails">
+						<div class="userItem">
+							<div class="userItem-label">姓名: </div>
+							<input class="userName" placeholder="请输入姓名" value="" type="text">
+							<span class="tips name-tips">请输入您的姓名！</span>
+						</div>
+						<div class="userItem">
+							<div class="userItem-label">联系方式: </div>
+							<input class="userTel" placeholder="请输入您的手机号" value="" type="number">
+							<span class="tips tel-tips">请输入您的手机号！</span>
+						</div>
+					</div>
+					<a id="userSubmitBtn" class="userSubmitBtn" href="javascript:;">完成</a>
+				</div>
+			</section>
+		</div>
+
+    	<script src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		
+		<script src="js/editer.js"></script>
+		<script>
+			//进入到下一页
+			function moveNextScene(){
+				// var curScene = $('.scene-active');
+				// var curScene = $('.scene-active');
+				// var nextScene = curScene.next('.scene');
+				// if(nextScene.length > 0){
+				// 	curScene.removeClass('scene-active').addClass('scene-prev scene-out');
+				// 	nextScene.removeClass('scene-next').addClass('scene-active scene-in');
+				// }else{
+				// 	console.log('最后一页。');
+				// 	return;
+				// }
+
+				var curScene = $('.edit-container');
+				var nextScene = $('#textBox');
+				curScene.removeClass('scene-active').addClass('scene-prev scene-out');
+				nextScene.removeClass('scene-next').addClass('scene-active scene-in');
+				
+			};
+
+			//进入到上一页
+			function movePrevScene(){
+				var curScene = $('.scene-active');
+				var nextScene = curScene.prev('.scene');
+				if(nextScene.length > 0){
+					curScene.removeClass('scene-active').addClass('scene-next scene-out');
+					nextScene.removeClass('scene-prev').addClass('scene-active scene-in');
+				}else{
+					console.log('最后一页。');
+					return;
+				}
+				
+			};
+		</script>
+	</body>
+
+</html>

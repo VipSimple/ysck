@@ -1,0 +1,147 @@
+/* 
+ * Copyleft 2015-future, 
+ * author designName vcpeople 'xiaodongicon' @lastmodified Date: 2016-07-30  
+ * */
+
+/* 
+                       (0 0)
+   +-------------oOO----(_)----------------+
+   |   Design By VC.   |
+   |   Dress: 平安保险大厦           |
+   |   Creation:2016.08                     |
+   +-------------------------oOO----------+
+                      |__|__|
+                       || ||
+                      ooO Ooo
+*/
+
+/*
+ * 公共动画类
+ * */
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration:.8s;
+  animation-duration:.8s;
+  -webkit-animation-dely:0s;
+  animation-dely:0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.5);
+        -ms-transform: scale(.5);
+        transform: scale(.5)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.layer-ani {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+}
+
+
+/*
+ * 弹出层
+ *  */
+@keyframes scaleMax{
+  0%{
+    transform: scale(.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleMax{
+  0%{
+    -webkit-transform: scale(.5);
+  }
+  100%{
+    -webkit-transform: scale(1);
+  }
+}
+.layerAni{
+  animation: scaleMax .3s ease-in-out forwards;
+  -webkit-animation: scaleMax .3s ease-in-out forwards;
+}
+
+
+
+
